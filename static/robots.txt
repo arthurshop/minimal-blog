@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
-sitemap: https://minimal-blog.lekoarts.de/sitemap.xml
+Sitemap: https://minimalblog48859.gtsb.io/sitemap.xml
