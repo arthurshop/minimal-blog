@@ -1,0 +1,32 @@
+---
+title: How to upload files in Google Colab
+date: 2022-04-11
+description: "Did you know that by using 2 lines of code you could easily import files in Google Colab? And other files related tips"
+tags:
+  - Python
+---
+
+If you like and enjoy using Notebook for Python (Google Colab, Jupyter, ...), you will be glad that there is a tip that could help you save some time to import files from your computer (or the one from the user of your app/scrip)
+
+![Importing files in Google Colab Notebook](content/posts/how-to-import-files-google-colab/import-files-google-colab.gif)
+
+===
+
+## 2 lines to create a prompt to import files from the user computer
+
+Did you know that by using 2 lines of code you could easily import files in Google Colab? It's like a small user interface, like a prompt. This tip is like the `input()` code to get information from a user. In this case it will let them upload a file from their computer, to the notbook.
+
+We will be using `.upload()` and create a variable. But first we need to import `files` from `google.colab`
+
+```python
+from google.colab import files
+file = files.upload()
+```
+
+> If you want to know more about `import`, you should read [Importing a library in Python](/how-to-import-libraries-python)
+
+## The (classic) drag and drop
+
+Without using this prompt, there is still a drag and drop option directly on Google Colab. To do so, go to the `Files` tab on the left and you will be able to drag and drop 1 file or several files at once. Even a folder or a `.zip` file to unzip
+
+In addition to that, the end user of your script will not be lost since it is the sanme behaviour as on their computer or lots of website in the web.

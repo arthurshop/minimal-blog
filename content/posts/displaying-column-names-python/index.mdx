@@ -1,0 +1,54 @@
+---
+title: How to know and display all column name of dataframe in Python
+date: 2022-05-24
+description: "Today tip and trick is to help you in your data analysis: displaying column names of your data frame"
+tags:
+  - Python
+---
+
+Let's say you have a dataframe (called `df`) and it is big. When big, I mean lots of columns and you would like how you can display them to filter you data frame for your analysis and cleaning.
+
+Today tip and trick is to help you in your data analysis: displaying column names of your data frame
+
+===
+ ## Before begining
+
+Since we will be using `pandas` Python library do to it: you will have to verify it is installed on you folder, computer or environement.
+
+There are 2 solutions to install `pandas` depending on which version of Python you are currently running.
+
+* For Python 2
+
+```python
+pip install pandas
+```
+
+* For Python 3
+
+```python
+pip3 install pandas
+```
+
+Note 1: if you are using a notebook like Google Colab or Jupyter Notebook, don't forget the `!` before `!pip` to make sure that it will launch the install
+
+Note 2: you will only have to do this install process once, unless you are using different environement to work on.
+
+## The next step: loading pandas (of course)
+
+The next step after the install is to load the library
+
+```python
+import pandas as pd
+```
+
+> If you would like to know more about `import`, I invite you to read this article: [Importing a library in Python](/how-to-import-libraries-python)
+
+## Afficher les columns grâce à pandas en Python
+
+Remember we name our datafrane `df`, but if you named it otherwise, you will have to change the `df` mention below to the name of your dataframe.
+
+```python
+for col in df.columns:
+  print(col)
+```
+So what does this 2 line of code are doing: for every column (`col`) in your dataframe (`df`), print (`print()`) the result.

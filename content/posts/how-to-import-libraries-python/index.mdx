@@ -1,0 +1,79 @@
+---
+title: How to import python libraries
+date: 2022-05-21
+description: "As simple as it could be, let's find out together how to import libraries in Python"
+tags:
+  - Python
+---
+
+First you will have to verify if the library/the package is installed on you environement (or your machine or server).
+
+_Note: you might found different terminologies for libraries, it could also be called packages or modules._
+
+This import will work if you are using any version of Python (meaning Python 2 or Python 3).
+
+## How to import a library 
+
+To import a library, you will have to use `import` + `{the name of your library}`
+So you could do this to import libraries one by one:
+
+```python
+import library1 
+import library2
+import library3
+import library4 
+```
+
+Or you could use `import` and split libraries with a comma on the same line.
+
+```python
+import library1, library2, library3, library4
+```
+
+## import libraries as aliases
+
+Sometime and to simplify your code and how you will call some python fuction, you will be able to define some aliases for your libraries. It works that way: `import` + `{the name of your library}` + `{alias}`
+
+Let's take a generic example (and we will see some examples below):
+
+```python
+import library1 as l1
+```
+
+_Note: you can definitely use any alias to call later a library on your scripts ... but there are some conventions._
+
+## How to import famous libraries in Python
+
+Let's see together some example of "famous" libraries and how to import them.
+
+### import pandas
+
+```python
+import pandas as pd
+```
+
+`pd` is usually the alias of `pandas`, this is one of the convention.
+
+### import numpy
+
+```python
+import numpy as np
+```
+
+The convention for `numpy` is to use `np` as an alias.
+
+### import re 
+
+```python
+import re
+```
+
+Here there is not need to use an alias because `re` is only two letters and that is short enough.
+
+### import json
+
+```python
+import json
+```
+
+No alias in this example.
