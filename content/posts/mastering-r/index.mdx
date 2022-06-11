@@ -1,0 +1,122 @@
+---
+title: Install packages from Mastering Software Development in R
+date: 2018-01-18
+description: "Installing packages in R from Mastering R the book: what a good introduction to this language it is!"
+tags:
+    - R
+---
+
+I'm currently reading a really nice book "Mastering Software Development in R" — but also a complete book — about R language. It was written by Roger D. Peng, Sean Kross and Brooke Anderson
+
+<p align="center">
+  <img src="./Mastering-Software-Development-in-R.jpeg" alt="Mastering Software Development in R cover - Arthur Camberlein" title="Cover of Mastering Software Development in R" />
+</p>
+
+## Mastering Software Development in R
+
+In the introduction of this book, authors give you an insight for all the packages they will use — and also invite you to install them — If you familiar with R, it will be no big deal ;-) And maybe a lot of theses packages are already installed on you R — ... but familiar or not I will give you some advice to be more efficient, because that's 45 packages.
+
+Because time is what we are looking for with software like R: automation of data analyses to get more time of "real consulting" !
+
+## Installing packages with R
+
+If you know just a little of R you could try :
+
+```r
+install.packages("package_name")
+```
+
+But really 45 times, are you insane ? ;-)
+
+If you just have to install a few packages, you could try to install several — dependents — packages in one : 
+```r
+install.packages("package_name")
+```
+
+## Onliner to install packages with R
+
+But what I recommend you to do is to install all packages at once, with this line (example) :
+
+```r
+install.packages(c("package_one", "package_two", "...", "package_n"))
+```
+
+Note: it could take time ... time that you could use to comment this article and take a coffee/a tea!
+
+### All the packages
+
+And with all the packages :
+
+```r
+install.packages(c("choroplethr", "choroplethrMaps", "data.table", "datasets", "devtools", "dlnm", "dplyr", "faraway", "forcats", "GGally", "ggmap", "ggplot2", "ggthemes", "ghit", "GISTools", "grid", "gridExtra", "httr", "knitr", "leaflet", "lubridate", "magrittr", "methods", "microbenchmark", "package", "pander", "plotly", "profvis", "pryr", "purrr", "rappdirs", "raster", "RColorBrewer", "readr", "rmarkdown", "sp", "stats", "stringr", "testthat", "tidyr", "tidyverse", "tigris", "titanic", "viridis"))
+```
+
+## With a variable
+
+You could also create a variable including all packages, like that :
+
+```r
+packages <- c("choroplethr", "choroplethrMaps", "data.table", "datasets", "devtools", "dlnm", "dplyr", "faraway", "forcats", "GGally", "ggmap", "ggplot2", "ggthemes", "ghit", "GISTools", "grid", "gridExtra", "httr", "knitr", "leaflet", "lubridate", "magrittr", "methods", "microbenchmark", "package", "pander", "plotly", "profvis", "pryr", "purrr", "rappdirs", "raster", "RColorBrewer", "readr", "rmarkdown", "sp", "stats", "stringr", "testthat", "tidyr", "tidyverse", "tigris", "titanic", "viridis")
+```
+
+And then call them directly on a variable ;-)
+
+## Listing all the packages from "Mastering Software Development in R"
+
+The list of all the packages are :
+
+* choroplethr
+* choroplethr
+* Maps
+* data.table
+* datasets
+* devtools
+* dlnm
+* dplyr
+* faraway
+* forcats
+* GGally
+* ggmap
+* ggplot2
+* ggthemes
+* ghit
+* GISTools
+* grid
+* gridExtra
+* httr
+* knitr
+* leaflet
+* lubridate
+* magrittr
+* methods
+* microbenchmark
+* package
+* pander
+* plotly
+* profvis
+* pryr
+* purrr
+* rappdirs
+* raster
+* RColorBrewer
+* readr
+* rmarkdown
+* sp
+* stats
+* stringr
+* testthat
+* tidyr
+* tidyverse
+* tigris
+* titanic
+* viridis
+
+If you've understand how it works, it would be the same to call several libraries :
+
+```r
+library(c("choroplethr", "choroplethrMaps", "data.table", "datasets", "devtools", "dlnm", "dplyr", "faraway", "forcats", "GGally", "ggmap", "ggplot2", "ggthemes", "ghit", "GISTools", "grid", "gridExtra", "httr", "knitr", "leaflet", "lubridate", "magrittr", "methods", "microbenchmark", "package", "pander", "plotly", "profvis", "pryr", "purrr", "rappdirs", "raster", "RColorBrewer", "readr", "rmarkdown", "sp", "stats", "stringr", "testthat", "tidyr", "tidyverse", "tigris", "titanic", "viridis"))
+```
+
+Hope this article helped you or interesed you, if it's the case you can share it and give a thumb up!
+
+Thanks!

@@ -27,6 +27,10 @@ module.exports = {
             slug: `/blog`,
           },
           {
+            title: `Project`,
+            slug: `/project`,
+          },
+          {
             title: `About`,
             slug: `/about`,
           },
@@ -37,8 +41,8 @@ module.exports = {
             url: `https://twitter.com/ArthurCa`,
           },
           {
-            name: `Homepage`,
-            url: `https://arthur.camberlein.com`,
+            name: `FR`,
+            url: `https://arthur.camberlein.fr`,
           },
         ],
       },
