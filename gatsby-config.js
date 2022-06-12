@@ -27,8 +27,8 @@ module.exports = {
             slug: `/blog`,
           },
           {
-            title: `Project`,
-            slug: `/project`,
+            title: `Projects`,
+            slug: `/projects`,
           },
           {
             title: `About`,
@@ -43,6 +43,7 @@ module.exports = {
           {
             name: `FR`,
             url: `https://arthur.camberlein.fr`,
+            target: `_blank`
           },
         ],
       },

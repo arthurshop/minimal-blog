@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://minimalblog48859.gtsb.io/sitemap.xml
+Sitemap: https://arthur.camberlein.com/sitemap.xml
