@@ -1,0 +1,64 @@
+---
+title: Some SQL Tips - SQL 101
+date: 2022-06-03
+description: Some tips (and tricks?) about SQL. This is your SQL 101 course alongside with me ;-) and this post will be updated on a regular basis
+tags:
+  - Tips
+  - SQL
+banner: ./sql-table-joke.jpeg
+---
+
+I don't have the pretention to know everything about SQL. But even if I don't know the inside and out of this language, I will bring you alongside me for some tips. So in this article I'll share a few tips I've gotten from my experience working with SQL
+
+<p align="center">
+  <img src="./sql-table-joke.jpeg" alt="Table and chair: tables like in SQL - Arthur Camberlein" title="Analogy for SQL table with a real table" />
+</p>
+
+My goal tis to give you a few tips to make SQL easy and usable. Hoping that will make it quick and easy to get the hang of SQL queries for you.
+
+## Distinct
+
+`DISTINCT` is really cool if you are looking for filter a specific table based on a value. For example you could use `DISTINCT` to display all domains in your table and after filtering it with `WHERE`.
+
+(1)
+```sql
+SELECT DISTINCT colonne1, colonne2
+FROM FROM {table_name}
+```
+
+(2)
+```sql
+SELECT colonne1, colonne2
+FROM FROM {table_name}
+WHERE colonne2 = {unique_value}
+```
+
+> You can find it close to the `=UNIQUE()` formula in Google Spreadsheet or `.unique` in Python with `pandas` 
+
+## Limit
+
+This is one of my favorite to use: it's easy, simple and so efficient! What all 3 of that? Why using `LIMIT` on your query? To test you query before running everything out of it!
+
+```sql
+SELECT *
+FROM {table_name}
+LIMIT 10
+```
+
+As its name state, LIMIT allow you to limit the number of the results from you query! It is particularly good to use that to test your query of big tables.
+
+> this `LIMIT` could be the equivalent of `head` or `tail` if your are R or Python user
+
+## A tip for SEO with a search and replace
+
+This tips might help you if you are using Wordpress and/or if you are an SEO: a search and replace for every URLs in our database.
+
+```sql
+UPDATE `wpecuXX_posts` 
+SET guid = REPLACE(guid, 'http://www.domaine.tdl/', 'https://www.domaine.tdl/') 
+WHERE `guid` LIKE 'https://www.domaine.tdl//%';
+```
+
+> Note that this example could work if you are doing a migration (other than https > https), or moving from staging to production (easy to verify you didn't miss a link for example).
+
+In this case, I am only taking care of absolute URL. But let's say that for SEO purpose, I recommend you to use relative URLs in your pages, posts, ... for Interlinking purposes.

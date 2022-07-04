@@ -1,0 +1,29 @@
+---
+title: VSCode from the CLI on MacOS
+date: 2022-07-01
+description: "Let's keep it simple: you have to open several URL at once and you are wondering how to do that: let's find out together!"
+url: vs-code-cli
+tags:
+  - CLI
+  - Terminal
+banner: ./terminal-c-for-cli.jpeg
+---
+
+Like a lot of people, I am now using VS Code as my main editor on Mac OS. And I try to automate my tasks as much as possible, so I create aliases in my Terminal (yes, not something new, but you got the context), including one for _VSCoce_ aka `code`.
+
+<p align="center">
+  <img src="./terminal-c-for-cli.jpeg" alt="Terminal C...LI - Arthur Camberlein" title="Behind the door you will be able to open URLs" />
+</p>
+
+## Changing the alias for VS Code
+
+I am using zsh so my aliases should be in `~/.zshrc` but I had an issue and `code .` was not opening VS Code but giving me an error like this one `zsh: command not found: code`
+
+I found the solution on Stackoverflow ([here for the curious](https://stackoverflow.com/questions/29955500/code-is-not-working-in-on-the-command-line-for-visual-studio-code-on-os-x-ma)).
+
+What helped me was: 
+
+1. Going to VSCode
+2. Use the `⇧ + ⌘ + P ` to open the _Command Palette_
+3. Select _Uninstall 'code' command from PATH_
+4. Instaling it again thanks to _Install 'code' command from PATH_
