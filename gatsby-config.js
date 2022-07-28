@@ -34,15 +34,25 @@ module.exports = {
             title: `About`,
             slug: `/about`,
           },
+          {
+            title: `North American SEO Specialist`,
+            slug: `/us`,
+          },
         ],
         externalLinks: [
           {
             name: `Twitter`,
             url: `https://twitter.com/ArthurCa`,
+            target: `_blank`
           },
           {
             name: `FR`,
             url: `https://arthur.camberlein.fr`,
+            target: `_blank`
+          },
+          {
+            name: `Blog FR`,
+            url: `https://www.mercisergey.com`,
             target: `_blank`
           },
         ],
