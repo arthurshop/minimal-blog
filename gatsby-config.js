@@ -158,6 +158,7 @@ module.exports = {
         openAnalyzer: false,
       },
     },
+    `gatsby-plugin-meta-redirect`,
     `gatsby-plugin-meta-redirect` // make sure this is always the last one
   ].filter(Boolean),
 }
