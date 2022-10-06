@@ -1,0 +1,222 @@
+---
+title: That day I learn Ruby
+date: 2022-08-17
+description: "That day I learn Ruby during at Hackhathon at my company. Let's see how it went!"
+tags:
+  - Ruby
+  - Learning
+  - CLI
+banner: ./ruby-learning-curve.jpeg
+---
+
+Don't get me wrong, I don't have the pretention to know Ruby or how to code in Ruby. It's just a way of saying that "if you want to do something, just do it!" I am sharing "simple" knowledge stuff for everyone and for sharing knowledge.
+
+> So Ruby: Created/designed in 1995 by Yukihiro Matsumoto (aka “Matz”)
+
+<p align="center">
+  <img src="./ruby-learning-curve.jpeg" alt="Learning Ruby - Arthur Camberlein" title="That day I learn Ruby?" />
+</p>
+
+## Let me tell you a story about Ruby
+
+One day, we had one of our Hackhathon at my current company & we werw short on dev support for an idea I had; so I said to myself "why not try to build something that I could connect to our exisiting tool".
+
+The goald was to connect our website and search for some way to optimize our Interlinking strategy. I will not go into to much details about the how and what of this tool (internal knowledge guys 😇); But I will explain my journey into Ruby.
+
+> Interlinking: the process of linking 2 pages on the same property/website. The end goal is to help crawler discover these pages and enhance the visibility (and the Organic ranks) of a specific page.
+
+## First step: What is Ruby?
+
+I heard of Ruby in the past, but that was really blurry for me. So the first thing I did is using a search engine and find official website and good articles about this language. Following that, the second step was to search on our internal documentation for coursese, tutorials, ...
+
+I found great learning tool thanks to CodecAemy (in addition to path available for employee at Shopify). Let me share with you some of the courses I took and the thing I learned!
+
+## Learning Ruby: the courses 101, 102 and 103
+
+The goal of these introduction courses were to understand the structure of the language and how variables are working
+
+### Learning Ruby 101
+
+The first course for me was "quite logic and easy" since I alreay knew some basis in R, Python and SQL. Especially knowing basic Python help me I must say.
+
+#### Installing ruby
+
+For this article, I will not display how to install Ruby on your machine: also that could depend on the OS you have, its version and what you are currently using!
+
+#### Commenting in Ruby
+
+Commenting content is really useful, especially when you are learning, I found it really easy to remember specific lines of code and what they do. This was my first learning really and so to comment in Ruby, you could use either `#` or `=begin` and `=end` depending on if you want to comment one or several lines of code.
+
+```ruby
+# Comment in Ruby with `#` foir single line
+```
+
+I'll use this first one to remember some stuff along the way
+
+
+```ruby
+=begin
+Comment in ruby with 
+`=begin`
+and
+`=end`
+for multiple line and it is case sensitive
+=end
+```
+
+I'll use this one to comment some parts of my code to run and test it. For example if I know some part of the code is working and the other on is failling: better understanding where it is failing.
+
+#### Arithmetics in Ruby
+
+6 arithmetics operators
+* Addition (`+`)
+* Subtraction (`-`)
+* Multiplication (`*`)
+* Division (`/`)
+* Exponentiation (`**`)
+* Modulo (`%`)
+
+So what does that mean?
+
+if:
+* my_num = 100
+* my_num1 = my_num * 4
+* my_num2 = my_num1/16
+
+Then:
+* my_num1 = 400
+* my_num2 = 25 OR my_num2 = my_num/4
+
+More maths below just for you, with examples
+
+```ruby
+sum = 13 + 379
+puts sum
+> 392
+```
+
+```ruby
+product = 923 * 15
+puts product
+> 13845
+```
+
+```ruby
+quotient = 13209 / 17
+puts quotient
+> 777
+```
+
+#### Data type in Ruby
+
+There are three data types in Ruby that we're interested in right now: Numeric (any number), Boolean (true/false), and String ("random text").
+
+Where you declare a variable `var_var` and give it a value `depending_on_type`
+
+```ruby
+puts my_num
+puts my_bolean
+puts my_string
+```
+
+#### Run and display Ruby informations
+
+To launch a ruby script you created, you will have to run `ruby name_of_file.rb` in you [CLI](/tags/cli).
+
+You can also use `puts` is the way to display/print something  from your script & it will output 2 lines. `puts` means `put strings` on its full length
+> `puts` is the `print('value')` equilavent in Python
+
+### Learning Ruby 102
+
+Some might think it is too "simple", but remember that this is the second course of the Ruby 102, I took ✌️ 
+
+#### Length in ruby
+
+For the length in Ruby, you will use `.length`
+
+```ruby
+variable = "Testing the length of myvariable"
+size = variable.length
+puts size
+```
+
+Note that you could also directly add `"Testing the length of myvariable".length` in your script
+
+```ruby
+variable = "Testing the reverse of my variable"
+size = variable.reverse
+puts size
+```
+
+Note that you could also directly add `"Testing the reverse of my variable".reverse`
+
+Why using `.reserve` => Reversing input can be useful if you want to sort a list of values from highest to lowest instead of lowest to highest.
+
+#### Upper and lower cases
+
+Yes, still simple as it could be, but remember this is an introduction to Ruby. So to print (`puts` if you follow) a string in uppercase you will use `.upcase` and to fo the same thing downcase it will be ( ... wait for it ... ) `.downcase`
+
+```ruby
+name = "Arthur"
+name_uper = name.upcase
+name_lower = name.downcase
+puts name_uper
+puts name_lower
+
+> ARTHUR
+> arthur
+```
+
+#### Varables: string and integer
+
+```ruby
+my_name = "Arthur" #String
+my_age = 32 #Integer
+```
+
+### Learning Ruby 103
+
+Let's something more tangible begin for this Ruby 103: strings and strings Methods
+
+Two way of doing it:
+* with several variable
+* adding one method after the other one
+
+=> It will lead to the same output
+
+#### Strings and String Methods: One variable
+
+```ruby
+name1 = "Arthur".downcase.reverse.upcase
+puts name1
+```
+
+Like an example we already saw before
+
+
+```ruby
+names = "Arthur"
+names_lowercase = names.downcase
+names_down_reverse = names_lowercase.reverse
+names_down_reverse_up = names_down_reverse.upcase
+
+puts names_down_reverse_up
+```
+
+### Learning Ruby 201
+
+Let's go directly to the next step of this introduction (for me it was at least): launching the shell command.
+
+In python you would use `python` or `python3`, in Ruby it's `irb` & it stands for `Interactive Ruby Shell`
+
+## So in the end: what about Ruby?
+
+In the end I was able to learn and understand Ruby ... but not build a tool in 2-3 days (obviously). It was great, I am feeling more comfortable understanding and making changes to our website (yeah part of the [Technical SEO](/tech-seo-what-is-it) priviledge is to modify Tech stuff 😅).
+
+And in the end I used Python and Streamlit to build the app I had in mind: I am more familiar with [Python](/tags/python) and thanks to [SQL](/tags/sql) I was able to connect this tool with our exisitng ones.
+
+## Want to hop on the train?
+
+If you want to hop on the Ruby train: let's hit the Rails! You can follow the same introduction course I took on CodecAdemy, you could go to Udemy or go to Coursera or even RubyMonk (I will not list everywebsite available). There is a ton of ressources online to learn Ruby, including the one from the Ruby Foundation!
+
+I will finish this article by sharing with you my (not mine directly) cheatsheet from CodecAemy: [https://www.codecademy.com/learn/learn-ruby/modules/learn-ruby-introduction-to-ruby-u/cheatsheet](https://www.codecademy.com/learn/learn-ruby/modules/learn-ruby-introduction-to-ruby-u/cheatsheet)
