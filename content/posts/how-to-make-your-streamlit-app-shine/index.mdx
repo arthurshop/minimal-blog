@@ -1,21 +1,63 @@
 ---
-title: Learning Python - Where? When? How?
-date: 2022-09-27
-description: "Yes I am talking about SEO stuff! Here let's see what kind of weird stuff we could find doing SEO"
+title: How to make your Streamlit app Shine?
+date: 2022-10-13
+description: "What is Streamlit and how to make it shine? I have a few tips that I want to share with you, are you ready?"
 tags:
-  - SEO
+  - Python
+  - Streamlit
   - Data
-banner: ./learning-python.jpg
+banner: ./streamlit-shine.jpg
 ---
 
 Finding weird stuff on the Internet is not a new thing, but here I am only talking about weird SEO stuff while doing it's (SEO) work. This is what this article is about, the FWS!
 
 <p align="center">
-  <img src="./learning-python.jpg" alt="Learning Python - Arthur Camberlein" title="How and where to learn Python?" />
+  <img src="./streamlit-shine.jpg" alt="How Streamlit is shining - Arthur Camberlein" title="Streamlit is shinning. Why not shyne with it?" />
 </p>
 
-## Learn Python with Github Copilot
+## Give some still to your app with titles
 
-This sentence is coming from a podcast on frictionlog.com: is it possible to learn python just by follwing GitHub Copilot.
+Let's start simple: titles. What better way to give some style and shine to your webapp than to get some orders and put some titles, header and subheaders.
 
-Personal note: I like Github copilot ... but to learn a language like Python with it, it might be too difficult. In fact Github Copilot is a great tool, to help you but not to learn something in my opinion. Why? Because of two examples (among others), (1) if you are using Github Copilot without any reflexion, you will not learn (except how to use your `Tab` key 😇), (2) most of the time, GitHub Copilot creates are "too simple" `df` / `df_2` / `df_df` /...
+First it's like in SEO: only one title that will be the equivalent of you `<title>` tag and you `<h1>` tag. So at the start of your Python script use this
+
+```python
+st.title('Your shinny title')
+```
+
+After that, you could get the equivalent of `<h2>` tags thanks to the `st.header()`
+
+```python
+st.header('Your shinny header')
+```
+
+And if you wanna go a little deeper, let's use the `st.subheader()`
+
+```python
+st.subheader('Your shinny sub header')
+```
+
+## Selections could make your app shine
+
+With `st.selectbox()` or `st.multiselect()` you could let your users select defined variables, directly on the UI.
+
+You can even let then add something in a text box with `st.text_input('Shinny search?')` and the script that runs the app could help them find what they are looking for. You can think of anything ... and it's compatible with REGEX 🏎 🌎
+
+## Using the sidebar
+
+I must say that one of my favorite stuff is adding elements in the sidebar, not just for adding them, but mostly to help the user understand the app and make some selection.
+
+Usually I use an "How to" section and all the selector we just saw. And the best thing is that the code nearly change, you just have to add `.sidebar` inside the existing `st` streamlit fuction you created. Let's see some examples:
+
+```python
+st.sidebar.header('Your sidebar shinny header')
+st.sidebar.subheader('Your sidebar shinny sub header')
+st.sidebar.text('Your shinny text on the sidebar')
+st.sidebar.markdown('Your **Shinny** _Markdown_ on the sidebar')
+st.sidebar.selectbox('Select only one', ['Shine', 'Shinny'])
+st.sidebar.multiselect('Choose several', ['Sun', 'Streamlit', 'You', 'SOS'])
+```
+
+## Not satisfied with my list of shinny things for your Streamlit app? It's okay
+
+If you want other tips, there is still the Cheat Sheet from Streamlit that could help you achieve great thing ... and shine (or let your app shine): [https://docs.streamlit.io/library/cheatsheet](https://docs.streamlit.io/library/cheatsheet)
