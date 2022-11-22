@@ -1,0 +1,53 @@
+---
+title: Compare 2 columns in python in bulk
+date: 2022-07-28
+description: "Let's create a third comparison column out of two already existing one in Python and see the outcome."
+tags:
+  - Python
+  - Data
+banner: ./match-2-columns-python.jpeg
+---
+
+*TIL moment*: Today I Lean how to create a new column to compare two other ones in Python, and it is as simple as a one liner thanks to pandas.
+
+<p align="center">
+  <img src="./match-2-columns-python.jpeg" alt="Creating a 3rd column to compare 3 in Python - Arthur Camberlein" title="2 columns are they identical? Let's compare them with Python" />
+</p>
+
+To be honest with you folks, I was going to use numpy, and do some "complicated stuff" ... but it is already in pandas & I am realy glad I found this. I didn't search for something on the Internet this time, I tried it as I thought it could work ... and it did!
+
+## The python code to compare to columns and create a third one
+
+The python code would be:
+
+```python
+df['match'] = df['Domain_destination'] == df['Domain_source']
+```
+
+## What the output
+
+It will give you a true of false
+
+<p align="center">
+  <img src="./df-match-2-columns.jpeg" alt="Code excerpt from Arthur Camberlein to compare 2 columns in Python" title="Using python to compare 2 columns in bulk" />
+</p>
+
+| Domain_destination | Domain_source | match |
+| -- | -- | -- |
+| camberlein.com | camberlein.com | true |
+| camberlein.com | camberlein.fr | false |
+
+## How to do this in Spreadsheet
+
+Of course, you can still use a formula to to this check, using `=EXACT()` ... but let be honest, if you are already manipulating your data thanks to Python, it is better to use this one liner ... don't you agree?
+
+The output in Google Spreadsheet would be:
+
+| First_url | Second_url | Exact |
+| -- | -- | -- |
+| url_a | url_b | `=EXACT(A2,B2)` |
+| url_a | url_b | FALSE |
+
+## This tips is coming from a tweet ...
+
+... I posted some time ago: https://twitter.com/ArthurCa/status/1534542099890286594
