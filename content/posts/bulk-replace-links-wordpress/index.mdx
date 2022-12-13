@@ -1,0 +1,80 @@
+---
+title: How to bulk replace link in Wordpress
+date: 2022-11-25
+description: "Wordpress is well used and versed with SEO, blogs & website. But how to bulk replace links on this CMS?"
+tags:
+  - HTML
+  - Wordpress
+banner: ./group-bulk-replace-links.jpg
+---
+Wordpress is well used and versed with SEO, blogs & website. But how to bulk replace links on this CMS?
+
+<p align="center">
+  <img src="./group-bulk-replace-links.jpg" alt="Bulk replace URLs in Wordpress - Arthur Camberlein" title="Learn how to replace links in bulk in Wordpress" />
+</p>
+
+You may ask yourself _"How can I bulk replace external links on my wordpress thank to a matching table?"_
+
+Recently I was looking at changing links in bulk: yes an affiliate platform changed their links and if still want to earn some money to run my website, I clearly need to change these links, Going one by one, was clearly not an option (we are talking about nearly a thousand links), so I asked myself if there was a way to do this in bulk. Let me show you how I did it -- and spoiler alert -- there are different way for doing that ; plus it's not that hard.
+
+## The Better Search Replace plug-in
+
+To bulk replace external links on your WordPress website, you can use a plugin called "Better Search Replace". This plugin allows you to search for specific links and replace them with new ones in bulk.
+
+> You might want to make a of you website and/or databse before using this plugin!
+
+### Can this plugin be used to replace one link?
+
+You've got 6 steps to follow:
+
+1. Install and activate the plugin on your WordPress website.
+2. Go to the "Tools" section in your WordPress dashboard and click on "Better Search Replace".
+3. In the "Search for" field, enter the URL of the external link that you want to replace.
+4. In the "Replace with" field, enter the new URL that you want to use.
+5. Select the tables where you want to search for and replace the links. By default, the plugin will search for and replace links in the "posts" table.
+6. Finnaly, Click on the "Run Search/Replace" button to start the process. The plugin will search for all instances of the old URL and replace them with the new URL.
+
+**Keep in mind that this process is irreversible, so it's important to make sure that you have a backup of your website before using this plugin.**
+
+And the good (best) part with this plugin is you can do it in bulk. YEEEEEESSSS
+
+### Can this plugin be used to bulk replace several links at once?
+
+Yes, the Better Search Replace plugin allows you to import a CSV file to replace external links in bulk. To do this, follow these six steps (nearly the same as the ones above):
+
+1. Install and activate the Better Search Replace plugin on your WordPress website.
+2. Go to the "Tools" section in your WordPress dashboard and click on "Better Search Replace".
+3. Click on the "Import" tab at the top of the page.
+4. Click on the "Choose File" button and select the CSV file that you want to import. The CSV file should contain two columns: the old URL in the first column and the new URL in the second column.
+5. Select the tables where you want to search for and replace the links. By default, the plugin will search for and replace links in the "posts" table.
+6. Click on the "Run Search/Replace" button to start the process. The plugin will search for all instances of the old URLs in the CSV file and replace them with the new URLs.
+
+**I repeat, this process is irreversible, so it's important to make sure that you have a backup of your website before using this plugin.**
+
+But the next question is (for the techies amoung us): _Can I do the same thing directly on my MySQL interface?_
+
+## Can I do the same thing directly on my MySQL interface?
+
+And the answer is -- also -- Yes, you can use MySQL to bulk replace external links on your WordPress website. You "just" have to understand how SQL works, and you're good to go!
+
+Here's how you can do it:
+
+1. Open your MySQL interface and connect to your WordPress database.
+2. Run the following SQL query to find all instances of the old URL in the "posts" table:
+
+```sql
+SELECT * FROM wp_posts WHERE post_content LIKE '%old-url%';
+```
+
+3. Replace "old-url" with the actual URL that you want to replace. This query will return all posts that contain the old URL in their content.
+4. Run the following SQL query to replace the old URL with the new URL in the "posts" table:
+
+```sql
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'htttp://www.old-url.tld', 'htttp://www.new-url.tld');
+```
+
+5. Replace "old-url" and "new-url" with the actual URLs that you want to use. This query will update all posts that contain the old URL and replace it with the new URL.
+
+**Once again -- and YES i repeat mysefl -- keep in mind that this process is irreversible, so it's important to make sure that you have a backup of your database before running these queries.**
+
+> In my case I was going after external links, but you can do the same for internal links.
