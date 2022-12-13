@@ -1,0 +1,63 @@
+---
+title: How to do a 410 on Wordpress?
+date: 2022-11-25
+description: "What is a 410? What does 410 stands for? What this is used for? How to do it in Wordpress"
+tags:
+  - HTML
+  - Wordpress
+banner: ./410-removing-wordpress.jpg
+---
+
+In this article I am focusing on Wordpress, but you'll see that of these tips could be reused for other platforms.
+
+<p align="center">
+  <img src="./410-removing-wordpress.jpg" alt="Removing URL with 410 in Wordpress - Arthur Camberlein" title="Learn how to use Wordpress to do a 410" />
+</p>
+
+## Context about the 410
+
+Let's start with some context about the 410 and after that I will give you some examples on how to do this directly in Wordpress.
+
+### What's 410?
+
+410 is an HTTP answer, if you aren't familiar with it let's simplify by saying: "if a page is display it's a 200 & if a page is not displaying it's a 404".
+
+> Yes I definitely took shortcuts here & on purpose!
+
+### What does it stands for?
+
+410 stands for _Gone_, the main goal of this HTTP answer is to remove an URL from your website (and inform both browser & search engine that you did that).
+
+In SEO it is mainly used for removing URL from the index, saying to Google -- and its bots -- this longer is no longer available; all of this without needed to redirect it.
+
+## How to do a 410 on Wordpress?
+
+### 410 on your `.htaccess` file
+
+To use & push a 410 on your website from the `.htaccess` file, you will have add a row in your file and do `Redirect` + either `gone` or `410` + your URL (`/url-of-your-website`)
+
+```
+Redirect gone /url-of-your-website
+```
+
+Or you can use `410` directly instead of `gone`
+
+```
+Redirect 410 /url-of-your-website
+```
+
+You can definitely do that for a lot of URLs, you will have to duplicate the example above and change the `/url-of-your-website`
+
+### 410 thanks to the Redirect plugin
+
+This _Redirect_ plugin is one of the most used in Wordpress to deal with different redirect codes; but did you know you could also used it for 4xx codes as 404 and 410. The later will be the center of our interest in this paragraph.
+
+For that, you will have to go to `Tools` > `Redirection`; then add a `Source URL`, plus click on wheel, and then go into `Error (404)` from the menu `When matched`. From there you can select `410 - Gone` from the `with HTTP code` menu.
+
+It's tricky because you think you will use a 404, so an error, but in fact it will be a 410, to remove the URL from the Index
+
+> FYI: This plugin is using the `REST API` from Wordpress
+
+### 410 thanks to the Rank Math plugin
+
+It will be as easy as adding a 410 thanks to _Redirection_: Go into `Rank Math`, and then `Redirections`, from there you can select `Add New`, and under `Maintenance Code` click on the `410 Content Deleted` after adding the `/url-of-your-website` you would like to remove from the index.
